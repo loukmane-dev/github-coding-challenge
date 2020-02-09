@@ -1,0 +1,35 @@
+/* Define Styles */
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Repository Cards styling */
+
+.info-row{
+  background-color: #EEEEEE;
+  .stars , .issues {
+    background-color: #BBBBBB;
+    color: white;
+  }
+}
+
+.repositories{
+  a {
+    color: black;
+    text-decoration: none !important;
+    &:hover {
+      color: black;
+    }
+  }
+
+  .image {
+    display: block;
+    width: 100px ;
+    height: 100px;
+    margin: auto
+  }
+  
+}

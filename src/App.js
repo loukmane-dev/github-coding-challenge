@@ -16,7 +16,13 @@ function App() {
   } ,[])
 
   return (
-    <Repository repositories={repositories} />
+    <div className = "container">
+      <div className="row justify-content-center">
+        <div className="col-md-9">
+          <Repository repositories={repositories} />
+        </div>
+      </div>
+    </div>
   );
 }
 

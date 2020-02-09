@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+/* Define Styles */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Repository Cards styling */
+.info-row {
+  background-color: #EEEEEE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.info-row .stars, .info-row .issues {
+  background-color: #BBBBBB;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.repositories a {
+  color: black;
+  text-decoration: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.repositories a:hover {
+  color: black;
 }
+
+.repositories .image {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+/*# sourceMappingURL=App.css.map */
