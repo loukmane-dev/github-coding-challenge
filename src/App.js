@@ -11,8 +11,14 @@ function App() {
   const [currentPage , setCurrentPage] = useState(1);
   const [records , setRecords] = useState(null);
 
+  /*Calculate the creation date (last 30 days)*/
+
+  let date = new Date();
+  date.setDate( date.getDate() -  30);
+  date = formatDate(date);
+
   useEffect(() => {
-    const url = `https://api.github.com/search/repositories?q=created:>2020-01-10&sort=stars&order=desc&page=${currentPage}&client_id=0940d5637c1f1c597752&client_secret=915c97a2b569d578433e381e058d86b84a8de671`;
+    const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=stars&order=desc&page=${currentPage}&client_id=0940d5637c1f1c597752&client_secret=915c97a2b569d578433e381e058d86b84a8de671`;
     axios.get(url).then(res=>{
     setRepositories(res.data.items);
     setRecords(res.data.total_count)
@@ -20,6 +26,7 @@ function App() {
     alert("Only the first 1000 search results are available")
   });
   } ,[currentPage])
+
 
   const onPageChanged = data => {
     const { currentPage} = data;
@@ -41,3 +48,19 @@ function App() {
 }
 
 export default App;
+
+/* Helper function to change the date format to YYYY-MM-DD */
+
+function formatDate(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  return [year, month, day].join('-');
+}
