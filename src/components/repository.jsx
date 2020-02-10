@@ -5,7 +5,7 @@ export default function Repository({repositories}) {
         <div className="repositories">
            { repositories.map(p=> 
                 <a key={p.id} href={p.html_url} target="_blank">
-                    <div className="row border p-2 m-2 rounded">
+                    <div className="row border d-flex flex-row align-items-center p-2 m-2 rounded">
 
                         <div className="avatar col-md-2 p-auto">
                             <img  className="image" src={p.owner.avatar_url} alt="avatar"/>
