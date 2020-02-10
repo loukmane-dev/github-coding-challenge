@@ -3,12 +3,12 @@ A small webapp that lists the most starred Github repos that were created in the
 
 <p align="center">
     <a href="https://featured-repositories.herokuapp.com/" target="_blank">
-        <img src="API.gif" width="500" height="500" />
+        <img src="API.gif" alt="WEBAPP" />
     </a>
 </p>
 
 
-## Installation and Launch
+## Install and Launch
 	clone/pull the repository
 	cd github-coding-challenge
 	npm install
