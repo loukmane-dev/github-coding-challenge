@@ -18,7 +18,7 @@ function App() {
   date = formatDate(date);
 
   useEffect(() => {
-    const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=stars&order=desc&page=${currentPage}&client_id=0940d5637c1f1c597752&client_secret=915c97a2b569d578433e381e058d86b84a8de671`;
+    const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=stars&order=desc&page=${currentPage}`;
     axios.get(url).then(res=>{
     setRepositories(res.data.items);
     setRecords(res.data.total_count)
